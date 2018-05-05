@@ -1,0 +1,18 @@
+#BMI
+height,weight = eval(input('''Your height(m) and weight(kg)[use","to apart]'''))
+bmi = weight/pow(height,2)
+print("BMI:{:.2f}".format(bmi))
+who,nat="",""
+if bmi<18.5:
+    who,nat= "Underweight","Underweight"
+elif 18.5<=bmi<24:
+    who,nat="Normal","Normal"
+elif 24<=bmi<25:
+    who,nat="Normal","Overweight"
+elif 25<=bmi<28:
+    who,nat="Overweight","Overweight"
+elif 28<=bmi<30:
+    who,nat="Overweighr","Obese Class"
+else:
+    who,nat="Obese Class","Obese Class"
+print("BMI-International:{0}\nBMI-Chinese:{1}".format(who,nat))
